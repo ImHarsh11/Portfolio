@@ -8,7 +8,7 @@ import ContactPage from './components/ContactPage'
 import React, { useEffect, useState } from "react";
 import Preloader from './components/Preloader'
 import ProjectTab from './components/Projects'
-import Footer from './components/footer'
+import  FooterSection from './components/FooterSec'
 import SkillsStack from './components/Skills'
 import BodyBackgroundImage from './assets/BackgroundImage.jpg'
 
