@@ -26,7 +26,7 @@ const FooterSocialLinks = [
   },
 ]
 
-export default function Footer() {
+export default function FooterSection() {
   return (
     <div id="footer-wrapper">
       <div className="build">
