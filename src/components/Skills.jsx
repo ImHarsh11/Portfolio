@@ -62,7 +62,7 @@ function SkillElements({ image, title, score }) {
 export default function SkillsStack() {
   return (
       <div id="skills-wrapper">
-        <h2><span>03.</span>Skills</h2>
+        <h2><span>03.</span>Some technologies I've worked with </h2>
       <section>
         <ul>
           {/* Displaying skills like Java, Python, HTML, CSS, etc. */}

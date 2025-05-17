@@ -14,8 +14,30 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   overscroll-behavior: none;
+
+}
+main {
+  position: relative;
+  z-index: 101;
+  height: 100%;
+  max-width: 100%;
+  font-family: 'Fira Code', monospace;
+  padding-top: 100px;
+  overflow: hidden;
+  background-color: #02182B;
 }
 
+
+header.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 3rem;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
 
 
 main {
@@ -91,6 +113,8 @@ header.navbar {
   transition: background 0.3s ease;
   text-decoration: none;
   box-shadow: 5px 5px 0 #64ffda;
+  animation: pulse 2s infinite;
+
 }
 
 .resume-btn:hover {
@@ -113,6 +137,7 @@ main{
   max-width:60%;
   margin: 0 auto;               
   text-align: left;     
+  /* background: #A6D3A0; */
   
 }
 
@@ -166,6 +191,8 @@ h2 span{
     margin: 0 3rem auto;  
     box-sizing: border-box;
     place-content: center;
+  /* background: #A6D3A0; */
+
     
   }
 
@@ -204,6 +231,8 @@ h2 span{
     /* border: 1px solid lightgray; */
     border-radius: 8px;
     padding: 5px;
+   animation: pulse 2s infinite;
+
   }
   .socialMedias ul li:hover{
     cursor: pointer;
@@ -212,7 +241,20 @@ h2 span{
   }
   .socialMedias img{
     width: 25px;
+    animation: slide-in 1000ms;
+    animation-delay: 500ms;
+    animation-fill-mode: backwards;
+  }
 
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+      opacity: 0.25;
+    }
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
   }
 /* ---------------------------------universal------------------------ */
 ul.custom-bullets {
@@ -340,11 +382,14 @@ ul.custom-bullets li::before {
   font-size:1rem ;
 }
 .section-container h1{
-  line-height: 1.2;
+  font-size: 3rem;
+  margin: 1rem;
+  /* line-height: 1.2; */
   opacity: 0.5;
+  /* color: #02182B; */
 }
 .section-container a {
-  color: #ccd6f6;
+  color: #64ffda;
   text-decoration: none;
   font-size: 1rem;
   font-family: 'Fira Code', monospace;
@@ -362,6 +407,8 @@ ul.custom-bullets li::before {
   text-decoration: none;
   background-color: rgba(100, 255, 218, 0.1);
   font-size: 1em;
+   animation: pulse 2s infinite;
+
 }
 
 .section-container section button:hover {
@@ -383,6 +430,15 @@ ul.custom-bullets li::before {
   }
 }
 
+.messageForm {
+  margin-top: 1rem;
+}
+
+.messageForm textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
 
 
 /* -------------loader effect----------- */
@@ -596,6 +652,9 @@ ul.custom-bullets li::before {
   .tech-item {
     font-size: 0.75rem;
   }
+  header.navbar {
+    position: absolute;
+  }
 }
 /* ------------footer------------------ */
 #footer-wrapper{
@@ -624,6 +683,13 @@ ul.custom-bullets li::before {
 .footer-social ul li a img{
   width: 25px;
   height: 25px;
+     animation: pulse 2s infinite;
+
+}
+#footer-wrapper .rights  a{
+  text-decoration: none;
+  color: white;
+  
 }
 /* -----------------skills--------------- */
 #skills-wrapper {
@@ -646,11 +712,11 @@ ul.custom-bullets li::before {
   gap: 1.5rem;
 }
 #skills-wrapper h2{
-  display: flex;
-  place-content: left;
+  
   text-align: left;
   margin: 1rem;
   color: white;
+  padding: 0;
 }
 .skill-item {
   border-radius: 8px;
@@ -658,10 +724,12 @@ ul.custom-bullets li::before {
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border: 1px solid #64ffda;
-
+  
+  
 }
 .skill-item:hover{
   box-shadow: 1px 1px 100px #64ffda;  
+  /* animation: pulse 2s infinite; */
 
 
 }
@@ -702,4 +770,5 @@ ul.custom-bullets li::before {
     color: white;
     font-size: 0.8rem;
   }
+
 }

@@ -9,9 +9,9 @@ export const EXPERIENCES = {
       description3:
         'Maintained clear communication with clients, provided technical consultation, and delivered projects meeting deadlines.',
     },
-    TCS_2: {
+    TCS_3: {
       role: 'React Frontend Developer @Tata Consultancy Services',
-      status: 'May 2024 - Jun 2025',
+      status: 'Apr 2024 - current',
       description1:
         'Worked on building frontend features using React, JavaScript, and Tailwind CSS, optimizing user experience and performance.',
       description2:
@@ -19,9 +19,19 @@ export const EXPERIENCES = {
       description3:
         'Handled real-time production issues and contributed to client-specific dashboards and monitoring tools.',
     },
+    TCS_2: {
+      role: 'Associate System Engineer  @Tata Consultancy Services',
+      status: 'Nov 2023 - Apr 2024',
+      description1:
+        'Monitored the ITRS dashboard and resolved case and incident tickets related to the live trading sessions for NSE.',
+      description2:
+        'Investigated and resolved real-time trading issues quickly to ensure minimal downtime and accurate data reporting.',
+      description3:
+        'Acted as a key support member during critical trading hours, collaborating with NSE stakeholders to ensure smooth operations.',
+    },
     TCS_1: {
-      role: 'System Analyst @Tata Consultancy Services',
-      status: 'Nov 2022 - May 2024',
+      role: 'Associate System Engineer Trainee @Tata Consultancy Services',
+      status: 'Nov 2022 - Nov 2023',
       description1:
         'Monitored the ITRS dashboard and resolved case and incident tickets related to the live trading sessions for NSE.',
       description2:
@@ -63,7 +73,7 @@ export const EXPERIENCES = {
       title: "Hex code color generator",
       description1: "Built a fully responsive site with modern UI components.",
       techsStack: [ "CSS3", "HTML5", "JavaScript ES6+"],
-       projectSite:"https://imharsh11.github.io/color-generator/"
+       projectSite:"https://hexcode-color-generator.vercel.app/"
     },
   ];
   

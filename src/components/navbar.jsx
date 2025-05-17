@@ -1,4 +1,4 @@
-import Resume from '../assets/Bajanthri_Harshavardhan Resume.pdf'
+import Resume from '../assets/Bajanthri_Harshavardhan Resume1.pdf'
 export default function Navbar() {
     return (
       <header className="navbar">

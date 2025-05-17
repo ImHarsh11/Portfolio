@@ -26,7 +26,7 @@ const FooterSocialLinks = [
   },
 ]
 
-export default function Footer() {
+export default function FooterSection() {
   return (
     <div id="footer-wrapper">
       <div className="build">
@@ -45,6 +45,9 @@ export default function Footer() {
       </div>
       <div className='rights'>
         <p>All rights reserved. © 2025 www.harshab.dev</p>
+          
+          <p>Design inspired from <a href="https://v4.brittanychiang.com/">brittany chiang</a> 
+        </p>
       </div>
     </div>
   );

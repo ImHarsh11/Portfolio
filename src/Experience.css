@@ -44,6 +44,11 @@
   list-style: none;
   /* min-width: 180px; */
   margin: 1rem;
+  /* background-color: #12d081; */
+  border-radius: 15px;
+  padding: 1rem;
+  /* border: 1px solid #35ce8d; */
+
 }
 
 .experience-menu button {
@@ -58,6 +63,8 @@
   opacity: 0.85;
   transition: all 0.2s ease-in-out;
   text-align: left;
+  border-radius: 5px;
+   animation: pulse 2s infinite;
 }
 
 .experience-menu button:hover {
@@ -68,7 +75,36 @@
 .experience-menu button.active {
   border-left: 2px solid #12d081;
   background-color: #465362;
+  border-radius: 5px;
   color: #64ffda;
+}
+
+@keyframes pulse {
+  0% {
+    border-color: #35ce8d;
+    box-shadow: 0 0 0 0 rgba(246, 227, 90, 0.4);
+  }
+  50% {
+    border-color: #35ce8d;
+    box-shadow: 0 0 0 0.5rem rgba(248, 165, 49, 0);
+  }
+  100% {
+    border-color: #35ce8d;
+    box-shadow: 0 0 0 0 rgba(246, 227, 90, 0);
+  }
+}
+@keyframes pop-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 #tab-content {
@@ -83,7 +119,7 @@
   color: #c8c8c8;
   font-size: 1.2rem;
   margin-left: 0.5rem;
-
+  /* animation: pop-in 2s infinite;  */
 }
 
 #tab-content.show {

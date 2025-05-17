@@ -11,7 +11,7 @@ function TabButton({ children, onSelect, isSelected }) {
   }
 
 export default function ExperiencePage(){
-    const [selectedTopic, setSelectedTopic] = useState("freelancer");
+    const [selectedTopic, setSelectedTopic] = useState("TCS_3");
 
     function handleSelect(selectedButton) {
       setSelectedTopic(selectedButton);
@@ -40,11 +40,17 @@ export default function ExperiencePage(){
         <div className="experience-container">
           {/* Sidebar menu */}
           <menu className="experience-menu">
-            <TabButton
+            {/* <TabButton
               isSelected={selectedTopic === "freelancer"}
               onSelect={() => handleSelect("freelancer")}
             >
               Freelancer
+            </TabButton> */}
+            <TabButton
+              isSelected={selectedTopic === "TCS_3"}
+              onSelect={() => handleSelect("TCS_3")}
+            >
+              TCS_3
             </TabButton>
             <TabButton
               isSelected={selectedTopic === "TCS_2"}
