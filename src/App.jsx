@@ -8,7 +8,11 @@ import ContactPage from './components/ContactPage'
 import React, { useEffect, useState } from "react";
 import Preloader from './components/Preloader'
 import ProjectTab from './components/Projects'
+<<<<<<< HEAD
 import FooterSection from './components/FooterSec'
+=======
+import  FooterSection from './components/FooterSec'
+>>>>>>> df2e70b31698d7cf642fdb9fd119bcb3f608c1dc
 import SkillsStack from './components/Skills'
 
 function App() {
