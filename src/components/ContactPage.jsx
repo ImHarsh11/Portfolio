@@ -15,7 +15,7 @@ export default function ContactPage() {
     }
 
     try {
-      const response = await fetch('http://localhost:3001/api/message', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/message`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, message }),
