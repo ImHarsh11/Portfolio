@@ -4,20 +4,22 @@ const cors = require('cors');
 
 // Initialize Express app
 const app = express();
-const PORT = 3001;
+
+// Use Render's dynamic port if available, otherwise fallback to 3001
+const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors());
 app.use(express.json()); // to parse JSON body
 
-// Replace with your actual connection string
-const MONGO_URI = 'mongodb+srv://harshab1104:harshab7675@cluster0.mix4tcm.mongodb.net/portfolioMessages?retryWrites=true&w=majority';
+// Use environment variable for MongoDB URI (best practice)
+const MONGO_URI = process.env.MONGO_URI || 'your_fallback_connection_string_here';
 
 mongoose.connect(MONGO_URI)
   .then(() => console.log('✅ Connected to MongoDB'))
   .catch((err) => {
     console.error('❌ MongoDB connection error:', err);
-    process.exit(1); // stop server if no DB connection
+    process.exit(1);
   });
 
 // Define Mongoose schema & model
@@ -34,7 +36,6 @@ const Message = mongoose.model('Message', messageSchema);
 app.post('/api/message', async (req, res) => {
   const { name, email, message } = req.body;
 
-  // Validate fields
   if (!name || !email || !message) {
     return res.status(400).json({ error: 'Name, email, and message are required.' });
   }
@@ -51,5 +52,5 @@ app.post('/api/message', async (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
- console.log(`🚀 Server running on ${process.env.BASE_URL || 'http://localhost:' + PORT}`);
+  console.log(`🚀 Server running on ${process.env.BASE_URL || 'http://localhost:' + PORT}`);
 });
